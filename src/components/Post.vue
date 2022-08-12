@@ -5,6 +5,7 @@
             <p>Body: {{ post.body }}</p>
         </div>
         <div>
+            <button-component @click="$router.push(`/posts/${post.id}`)">open</button-component>
             <button-component @click="onDelete">delete</button-component>
         </div>
     </div>
