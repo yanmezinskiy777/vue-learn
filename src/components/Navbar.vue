@@ -4,6 +4,7 @@
     <nav class="btns">
       <ul>
         <li style="margin-right: 15px"><button-component @click="$router.push('/')">Main</button-component></li>
+        <li style="margin-right: 15px"><button-component @click="$router.push('/posts-vuex')">Posts Vuex</button-component></li>
         <li><button-component @click="$router.push('/posts')">Posts</button-component></li>
       </ul>
     </nav>
