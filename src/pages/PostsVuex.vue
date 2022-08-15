@@ -6,7 +6,7 @@
     <div class="search">
       <input-component
         style="margin-bottom: 20px"
-        v-model="searchTitle"
+        @update:model-value="setSearchTitle"
         placeholder="Search"
       />
     </div>
@@ -14,7 +14,7 @@
       <button-component @click="visibleModal = true"
         >Create Post</button-component
       >
-      <select-component v-model="selectedSort" :options="selectOptions" />
+      <select-component @update:model-value="setSelectedSort" :options="selectOptions" />
     </div>
     <list-component
       v-if="!isLoadingPosts"
