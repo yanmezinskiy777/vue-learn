@@ -1,9 +1,9 @@
 import { ref, onMounted } from "vue";
 import axios from "axios";
 
-export function usePosts(perPagePosts) {
+export function usePosts(perPagePosts, page) {
   const isLoadingPosts = ref(true);
-  const totalCount = ref(0);
+  const totalCount = ref(10);
   const posts = ref([]);
   const fetch = async () => {
     try {
@@ -12,7 +12,7 @@ export function usePosts(perPagePosts) {
         {
           params: {
             _limit: perPagePosts,
-            _page: 1,
+            _page: page.value,
           },
         }
       );

@@ -9,6 +9,9 @@ export default {
         entries[0].isIntersecting &&
         binding.value.page < binding.value.totalCount
       ) {
+        console.log("OBSERVER");
+        console.log(binding.value.page);
+        console.log(binding.value.totalCount);
         binding.value.fetch();
       }
     };
